@@ -1,0 +1,17 @@
+name: Validate Discussion Information
+description: Validate the input of the created Discussion 
+
+inputs:
+  body:
+    description: "Discussion Body"
+    required: true
+  title:
+    description: "Discussion Title"
+    required: true
+  body:
+    description: "Discussion Body"
+    required: true
+
+runs:
+  using: node16
+  main: index.js
