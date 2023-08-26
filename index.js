@@ -1,8 +1,9 @@
-import fs from 'fs';
-import * as jsonschema from 'jsonschema';
-import schema from './schema.json' assert { type: 'json' };
-import core from '@actions/core';
-import github from '@actions/github';
+const fs = require('fs');
+const jsonschema = require('jsonschema');
+const schema = require('./schema.json');
+const core = require('@actions/core');
+const github = require('@actions/github');
+
 
 const discussionTitle = core.getInput("title");
 const discussionBody = core.getInput("body");
