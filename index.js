@@ -4,9 +4,9 @@ import schema from './schema.json' assert { type: 'json' };
 import core from '@actions/core';
 import github from '@actions/github';
 
-const discussionTitle = core.getInput("disc_title");
-const discussionBody = core.getInput("disc_body");
-const inputLabels = core.getInput("disc_labels");
+const discussionTitle = core.getInput("title");
+const discussionBody = core.getInput("body");
+const inputLabels = core.getInput("labels");
 
 const labels = inputLabels.replace('[','').replaceAll('"','').replace(']','')
 const discussionLabels= labels.split(',');

@@ -8,8 +8,8 @@ inputs:
   title:
     description: "Discussion Title"
     required: true
-  body:
-    description: "Discussion Body"
+  labels:
+    description: "Discussion labels"
     required: true
 
 runs:
