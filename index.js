@@ -9,9 +9,16 @@ const discussionTitle = core.getInput("title");
 const discussionBody = core.getInput("body");
 const inputLabels = core.getInput("labels");
 
-const labels = inputLabels.replace('[','').replaceAll('"','').replace(']','')
-const discussionLabels= labels.split(',');
-console.log("discussionlabels:",discussionLabels);
+let discussionLabels;
+
+if (inputLabels === '') {
+  discussionLabels = [];
+} else {
+  const labels = inputLabels.replace('[', '').replaceAll('"', '').replace(']', '');
+  discussionLabels = labels.split(',');
+}
+
+console.log("discussionlabels:", discussionLabels);
 
 const promptJson = {
   Title: discussionTitle,
